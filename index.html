@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cervecería Bistró 122 | Gastropub en A Coruña</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9f506",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sticky-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #121212;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #f9f506;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white transition-colors duration-300">
+<div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2 group">
+<div class="bg-white dark:bg-zinc-800 text-xs font-bold py-2 px-4 rounded-lg shadow-xl mb-2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none border border-primary/20">
+        ¿Tienes alguna duda? ¡Escríbenos!
+    </div>
+<a class="bg-[#25D366] hover:scale-110 transition-transform text-white p-4 rounded-full shadow-2xl flex items-center justify-center" href="https://wa.me/34655736925" target="_blank">
+<svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+</svg>
+</a>
+</div>
+
+<header class="sticky top-0 z-40 w-full sticky-nav bg-background-dark/80 border-b border-zinc-800">
+<div class="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="text-primary">
+<span class="material-symbols-outlined text-4xl">restaurant_menu</span>
+</div>
+<h1 class="text-white text-xl font-extrabold tracking-tighter uppercase">Bistró 122</h1>
+</div>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-white text-sm font-semibold hover:text-primary transition-colors" href="#">Inicio</a>
+<a class="text-white text-sm font-semibold hover:text-primary transition-colors" href="#carta">Nuestra Carta</a>
+<a class="text-white text-sm font-semibold hover:text-primary transition-colors" href="#galeria">Galería</a>
+<a class="text-white text-sm font-semibold hover:text-primary transition-colors" href="#reviews">Reseñas</a>
+<a class="text-white text-sm font-semibold hover:text-primary transition-colors" href="#contacto">Contacto</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="hidden sm:flex items-center bg-zinc-800 rounded-lg px-2 py-1 gap-1">
+<button class="text-xs font-bold px-2 py-1 bg-primary text-black rounded">ES</button>
+<button class="text-xs font-bold px-2 py-1 text-zinc-400 hover:text-white">GL</button>
+<button class="text-xs font-bold px-2 py-1 text-zinc-400 hover:text-white">EN</button>
+</div>
+<button class="bg-primary hover:bg-white text-black text-sm font-bold px-4 py-2 rounded-lg transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">chat</span>
+<span class="hidden xl:inline">Pedir por WhatsApp</span>
+</button>
+</div>
+</div>
+</header>
+
+<section class="relative min-h-[90vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 bg-zinc-950">
+<div class="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent z-10"></div>
+<div class="w-full h-full bg-cover bg-center opacity-70 scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBiyzlMBPPgdWIMyF8cL89lWi4iXbD9uhoRIq_j-HC-aWYJALlCht_BFIgMuL7eqKZJ8g8-OqMwmMfpDHm25Ea0KiGTghOVUTsW9yVMUCqF-wM3pu0Bba5gWZRmgdoqxe_rUZ0sHpkG61t7wiXZDlwbL3KJBILu_bPpJNsMFu7UtTUICbqwehPWWqBlOH3mUgi_9vLxnVzc2g18ug9ouIdJU8NL2Zcav6ps3FZCCiUb8w5ZSG51jYhYnMe0kRlsn3TF0cAFhGrXNQ');"></div>
+</div>
+<div class="relative z-20 max-w-7xl mx-auto px-6 lg:px-10 py-20">
+<div class="max-w-3xl flex flex-col gap-8">
+<div class="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-1.5 rounded-full w-fit">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="text-xs font-bold uppercase tracking-widest">Abierto - Calle Juan Flórez</span>
+</div>
+<h1 class="text-white text-5xl md:text-7xl font-black leading-[1.1] tracking-tight">
+                Cervecería Bistró 122: El punto de encuentro en el <span class="text-primary">corazón de Coruña</span>
+</h1>
+<p class="text-zinc-300 text-lg md:text-2xl font-medium leading-relaxed max-w-2xl">
+                Cerveza fría, trato inmejorable y el tapeo casero que te hace sentir como en casa.
+            </p>
+<div class="flex flex-wrap gap-4 mt-4">
+<a class="bg-primary hover:bg-white text-black text-base font-bold px-8 py-3 rounded-lg transition-all shadow-xl shadow-primary/20" href="#carta">
+                    Ver Nuestra Carta
+                </a>
+<a class="bg-transparent border-2 border-white/20 hover:border-white text-white text-base font-bold px-8 py-3 rounded-lg transition-all" href="#contacto">
+                    Visítanos
+                </a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="bg-primary py-24" id="carta">
+<div class="max-w-7xl mx-auto px-6 lg:px-10">
+<div class="mb-16 text-center lg:text-left">
+<h2 class="text-black text-4xl md:text-5xl font-black mb-4">Nuestra Selección</h2>
+<div class="h-1.5 w-24 bg-black mx-auto lg:mx-0"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white rounded-2xl p-8 shadow-2xl transition hover:-translate-y-2">
+<div class="w-full h-56 rounded-xl mb-6 bg-cover bg-center shadow-inner" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCD_C2jR1brXZme2XQF_PVUauemQ8cYIoBcXSD6hjxxiyWDqQMXWYYdWvZ1nI__rkRU-_gX9MmbjddCi12fQqSEFPyMfs8rQv4fM2C5pTYaz_A6IrRIfLilu6NhgaLiIFmRRZhK2kpoypYz3p1_YXYa7_N-3bYYUQ8rDuI9RqIQF8WnUCBRlzkhspidRz-2K91bHqlHmyyNrysF1Lr0erNnzSzK2dR8mGHtOZ5jg6tWwXBqhBEPoHVP5ngEI7EPBZ2rs-9SKlpUSQ');"></div>
+<h3 class="text-black text-2xl font-extrabold mb-4">Desayunos</h3>
+<ul class="space-y-4 mb-8">
+<li class="flex justify-between items-center border-b border-zinc-200 pb-2">
+<span class="font-semibold text-zinc-700">Croissants artesanos</span>
+<span class="text-black font-bold">2,00€</span>
+</li>
+<li class="flex justify-between items-center border-b border-zinc-200 pb-2">
+<span class="font-semibold text-zinc-700">Napolitanas recién horneadas</span>
+<span class="text-black font-bold">2,20€</span>
+</li>
+<li class="flex justify-between items-center border-b border-zinc-200 pb-2">
+<span class="font-semibold text-zinc-700">Churros tradicionales</span>
+<span class="text-black font-bold">1,50€</span>
+</li>
+</ul>
+<div class="pt-6 border-t border-zinc-100">
+<span class="text-xs font-bold uppercase tracking-widest text-zinc-400">Desde las 8:00 AM</span>
+</div>
+</div>
+
+<div class="bg-zinc-950 text-white rounded-2xl p-8 shadow-2xl transition border border-white/5 hover:-translate-y-2">
+<div class="w-full h-56 rounded-xl mb-6 bg-cover bg-center shadow-inner" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBspo8fn1cqzw4ezVvnxkEV27yHrayJjewHrhZldZrj3RXRXemeD9fCzjREMtLiLqeS2RLHn-_8p5381I8v_JKKqF0y7y87gOp0ThtK-7kKbRJ7LK6fp1HJlnjfTS3XhPqtsfAuuXuGrTl5SNuGrVk0LSMRqq9Suoilfa95tia8BAAhaVoITL4AyijPR562y2xOM5v2NVFF5w4lRvztrnyK8DTYEnDt2xHWYrkHmXL6vITpnSFQgod7W8XyeYgIhswxO3iW-ORGuQ');"></div>
+<h3 class="text-primary text-2xl font-extrabold mb-4">Especialidades</h3>
+<ul class="space-y-4 mb-8">
+<li class="flex justify-between items-center border-b border-zinc-800 pb-2">
+<span class="font-bold">Tortilla de Betanzos</span>
+<span class="text-primary font-black">2,50€</span>
+</li>
+<li class="flex justify-between items-center border-b border-zinc-800 pb-2">
+<span class="font-bold">Raxo con Patatas</span>
+<div class="flex flex-col items-end">
+<span class="text-xs text-zinc-400">Tapa 3,00€</span>
+<span class="text-primary font-black">Ración 9,50€</span>
+</div>
+</li>
+<li class="flex justify-between items-center border-b border-zinc-800 pb-2">
+<span class="font-bold">Zamburiñas (Ración)</span>
+<span class="text-primary font-black">14,00€</span>
+</li>
+<li class="flex justify-between items-center border-b border-zinc-800 pb-2">
+<span class="font-bold">Pulpo Gallego</span>
+<span class="text-primary font-black">S.M.</span>
+</li>
+<li class="flex justify-between items-center border-b border-zinc-800 pb-2">
+<span class="font-bold">Tapas Variadas</span>
+<span class="text-primary font-black">Consúltanos</span>
+</li>
+</ul>
+</div>
+
+<div class="bg-white rounded-2xl p-8 shadow-2xl transition hover:-translate-y-2">
+<div class="w-full h-56 rounded-xl mb-6 bg-cover bg-center shadow-inner" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDKajJKqFwG_EiAor3SKCUiIhC8UI6BNOiVzOupXNT_fF0E42aTXYZId1V_R-RRPxSvvK30CWrtcKerJxdDzdQEeKD33PpSi7NmWu7wiBPKDjNa-r8CwqYhSVlYQT9KvIXqQWKcgf-eiHq6qG9LmUfwgYfy8IMUpT2fZAjmjlsFPeVLHLKM72jdowO6l3i2BSODPamnZOVUOyWXx9oLF2uSRdfLqJko1Ub2HUEhrHtbuqz6LvVabhuQkCWIGuobyKnbGSe1wEFKdw');"></div>
+<h3 class="text-black text-2xl font-extrabold mb-4">Postres Caseros</h3>
+<ul class="space-y-4 mb-8">
+<li class="flex justify-between items-center border-b border-zinc-200 pb-2">
+<span class="font-semibold text-zinc-700">Tarta de queso al horno</span>
+<span class="text-black font-bold">3,50€</span>
+</li>
+<li class="flex justify-between items-center border-b border-zinc-200 pb-2">
+<span class="font-semibold text-zinc-700">Flan de huevo artesano</span>
+<span class="text-black font-bold">3,00€</span>
+</li>
+</ul>
+<div class="pt-6 border-t border-zinc-100">
+<span class="text-xs font-bold uppercase tracking-widest text-zinc-400">Hechos a diario</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-24 bg-background-dark" id="galeria">
+<div class="max-w-7xl mx-auto px-6 lg:px-10">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<h2 class="text-white text-4xl md:text-5xl font-black mb-4 uppercase italic">Ambiente &amp; Sabor</h2>
+<p class="text-zinc-400 font-medium text-lg">Un vistazo al interior de nuestro local y nuestras especialidades.</p>
+</div>
+<div class="hidden md:flex gap-4">
+<button class="size-14 rounded-full border border-zinc-800 flex items-center justify-center hover:bg-primary hover:text-black transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="size-14 rounded-full border border-zinc-800 flex items-center justify-center hover:bg-primary hover:text-black transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-4">
+<div class="col-span-12 md:col-span-7 h-[400px] md:h-[500px] bg-cover bg-center rounded-3xl shadow-2xl relative group overflow-hidden" style="background-image: url('https://lh3.googleusercontent.com/gps-cs-s/AG0ilSw2spYUZfZ2-g1MkCqDiaHYNkgPI229H2PLL-8ICvY7Uh-zBasJE5kb3jLm2nRbrXfalN-vBo7sQ1_62wlFUnh9wDNiSkElouahruuvm1PWE6FGmwZU5Bxlzg3ZKS4qm165e3bLJw=s680-w680-h510-rw');">
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-bold text-xl">Interior del Local</div>
+</div>
+<div class="col-span-12 md:col-span-5 flex flex-col gap-4">
+<div class="h-[240px] bg-cover bg-center rounded-3xl shadow-2xl relative group overflow-hidden" style="background-image: url('https://lh3.googleusercontent.com/gps-cs-s/AG0ilSzd6hDZizrFPVIkWvAcL-GcJqeViQMmIYCEXZp37YXSVp4rMfANod-DZcvXBmVOmxzknYXSDk27W-j8GLfVaES19NdAjTL2as2-uyc9A-6ORZywsMaRS4HpUP7EhbIY8zRbHAXlPQ=s680-w680-h510-rw');">
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-bold">Especialidades</div>
+</div>
+<div class="h-[240px] bg-cover bg-center rounded-3xl shadow-2xl relative group overflow-hidden" style="background-image: url('https://lh3.googleusercontent.com/gps-cs-s/AG0ilSyqKY-TplWh9AEnp0Dg1EP33iVPkjmsNI1jhlhkR4A44si3Cq8yk7bheHBiwzptXN67w_vwm-DtWAY1PA9jsag2hF2OGbEi2epRKtOMRrtD43T3k7sxUjj74Fq-wRypDzBlqiGZ=s680-w680-h510-rw');">
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-bold">Nuestra Barra</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-5 h-[300px] bg-cover bg-center rounded-3xl shadow-2xl relative group overflow-hidden" style="background-image: url('https://lh3.googleusercontent.com/gps-cs-s/AG0ilSz6zCzSSjwRq77KM25F5YZc_qMXMUreyOlOYU3Y2bBAcGZOkqTfBRqpPHNGliuxQpsHcDPr4JVW5N7QhgB4N2Y1EV_icbovC3uNEhKHUtCXzius02VXCRfuV9msQSkk_mgwj2lAdw=s680-w680-h510-rw');">
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-bold">Ambiente Acogedor</div>
+</div>
+<div class="col-span-12 md:col-span-7 h-[300px] bg-cover bg-center rounded-3xl shadow-2xl relative group overflow-hidden" style="background-image: url('https://lh3.googleusercontent.com/gps-cs-s/AG0ilSwFwxDLD4s2RqCwwdH0gMOdmFVTP5Jh0y4W26-MfXpsfR-X8Pg__JoFdH12jJjFy0WhvrJqzxKx4ZiZqkDs7HmqI149__tDj8QkRMnwYOUUMBR_tm0XtlytEHMaWCKZR6w8MTdrSJP34ggw=s680-w680-h510-rw');">
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-bold text-xl">Cerveza Fría</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-24 bg-zinc-950 border-y border-zinc-900" id="reviews">
+<div class="max-w-7xl mx-auto px-6 lg:px-10">
+<div class="text-center mb-16">
+<h2 class="text-white text-4xl md:text-5xl font-black mb-4">Lo que dicen de nosotros</h2>
+<p class="text-zinc-500">Valoraciones reales de nuestros clientes</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-zinc-900 border border-zinc-800 p-8 rounded-3xl flex flex-col gap-4">
+<div class="flex items-center gap-4">
+<div class="size-14 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-xl">EC</div>
+<div>
+<h4 class="text-white font-bold">Elena Cruzgarcia</h4>
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+</div>
+</div>
+<p class="text-zinc-400 italic leading-relaxed">
+                    "Riquísima la comida y muy maja la camarera. El mejor sitio de Coruña para tomarse una Estrella bien tirada. La tortilla es espectacular."
+                </p>
+</div>
+<div class="bg-zinc-900 border border-zinc-800 p-8 rounded-3xl flex flex-col gap-4">
+<div class="flex items-center gap-4">
+<div class="size-14 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-xl">MP</div>
+<div>
+<h4 class="text-white font-bold">Mary Paz</h4>
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+</div>
+</div>
+<p class="text-zinc-400 italic leading-relaxed">
+                    "Relación calidad-precio muy bien. El raxo y las zamburiñas son obligatorias. Perfecto tanto para un desayuno como para una cena tranquila."
+                </p>
+</div>
+<div class="bg-zinc-900 border border-zinc-800 p-8 rounded-3xl flex flex-col gap-4">
+<div class="flex items-center gap-4">
+<div class="size-14 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-xl">JR</div>
+<div>
+<h4 class="text-white font-bold">Juan Ramón</h4>
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+</div>
+</div>
+<p class="text-zinc-400 italic leading-relaxed">
+                    "Ambiente inmejorable en el centro. El servicio es rápido y muy profesional. Da gusto encontrar sitios así donde se cuida tanto el detalle."
+                </p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white dark:bg-zinc-950" id="contacto">
+<div class="max-w-7xl mx-auto px-6 lg:px-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+<div>
+<h2 class="text-black dark:text-white text-5xl font-black mb-8 uppercase">Visítanos</h2>
+<div class="space-y-10">
+<div class="flex items-start gap-6">
+<div class="bg-primary p-4 rounded-2xl text-black">
+<span class="material-symbols-outlined text-3xl">location_on</span>
+</div>
+<div>
+<h4 class="text-xl font-bold dark:text-white mb-1">Estamos en el centro</h4>
+<p class="text-zinc-500 text-lg">Rúa Juan Flórez, 122<br/>15004 A Coruña, España</p>
+</div>
+</div>
+<div class="flex items-start gap-6">
+<div class="bg-primary p-4 rounded-2xl text-black">
+<span class="material-symbols-outlined text-3xl">schedule</span>
+</div>
+<div>
+<h4 class="text-xl font-bold dark:text-white mb-1">Horario de apertura</h4>
+<ul class="text-zinc-500 text-lg">
+<li>Lunes - Viernes: 08:00 - 00:00</li>
+<li>Sábados: 09:00 - 01:00</li>
+<li>Domingos: 10:00 - 23:30</li>
+</ul>
+</div>
+</div>
+<div class="flex items-start gap-6">
+<div class="bg-primary p-4 rounded-2xl text-black">
+<span class="material-symbols-outlined text-3xl">call</span>
+</div>
+<div>
+<h4 class="text-xl font-bold dark:text-white mb-1">Reservas y Consultas</h4>
+<p class="text-zinc-500 text-lg">+34 655 73 69 25</p>
+</div>
+</div>
+</div>
+</div>
+<div class="h-[600px] w-full rounded-3xl overflow-hidden shadow-2xl border-8 border-zinc-100 dark:border-zinc-900">
+<iframe allowfullscreen="" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2900.835474322479!2d-8.41113402340573!3d43.36149177111818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2e7cf10986793f%3A0xc6c764e2e2194689!2zUsO6YSBKdWFuIEZsw7NyZXosIDEyMiwgMTUwMDQgQSBDb3J1w7FhLCBFc3Bhw7Fh!5e0!3m2!1ses!2ses!4v1715600000000!5m2!1ses!2ses" style="border:0;" width="100%">
+</iframe>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-background-dark pt-20 pb-12 border-t border-zinc-900">
+<div class="max-w-7xl mx-auto px-6 lg:px-10">
+<div class="flex flex-col md:flex-row justify-between items-center gap-12 mb-16">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-4xl">restaurant_menu</span>
+<h2 class="text-white text-3xl font-black tracking-tighter uppercase">Bistró 122</h2>
+</div>
+<div class="flex gap-6">
+<a class="size-14 rounded-full bg-zinc-900 flex items-center justify-center text-white hover:bg-primary hover:text-black transition-all" href="#">
+<svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+<a class="size-14 rounded-full bg-zinc-900 flex items-center justify-center text-white hover:bg-primary hover:text-black transition-all" href="#">
+<svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"></path></svg>
+</a>
+</div>
+</div>
+<div class="border-t border-zinc-900 pt-10 flex flex-col lg:flex-row justify-between items-center gap-6">
+<p class="text-zinc-500 text-sm">© 2026 Cervecería Bistró 122. Todos los derechos reservados.</p>
+<div class="flex gap-8 text-sm font-medium">
+<a class="text-zinc-500 hover:text-white transition-colors" href="#">Aviso Legal</a>
+<a class="text-zinc-500 hover:text-white transition-colors" href="#">Privacidad</a>
+<a class="text-zinc-500 hover:text-white transition-colors" href="#">Cookies</a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>
